@@ -221,7 +221,7 @@ export const questionsCss = [
   },
 ];
 
- const questionJavascript = [
+ const questionsJavascript = [
   {
     question: "Welches Schlüsselwort wird verwendet, um eine Variable in JavaScript zu deklarieren?",
     choices: ["let", "int", "string"],
