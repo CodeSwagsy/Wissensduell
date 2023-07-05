@@ -2,7 +2,7 @@
 export {};
 
 import { question, keyInSelect } from "readline-sync";
-import { shuffle } from "./functions";
+import { shuffle, createPlayer } from "./functions";
 
 const spielerNamen = [];
 
@@ -23,4 +23,8 @@ console.log(`\nFolgende Spieler spielen also mit: ${spielerNamen.join(" ")}\n`);
 
 shuffle(spielerNamen);
 
+const spielerObjekt = createPlayer(spielerNamen);
+
 console.log(`${spielerNamen[0]} beginnt.`);
+console.log(spielerNamen);
+console.log(spielerObjekt);
