@@ -1,5 +1,9 @@
 import readline from "readline-sync";
-import { questionsHtml, questionsCss } from "./questionList";
+import {
+  questionsHtml,
+  questionsCss,
+  questionsJavascript,
+} from "./questionList";
 
 const GREEN = "\u001B[1m\u001B[32m",
   RED = "\u001B[1m\u001B[31m",
@@ -27,7 +31,7 @@ You choose a category: `
       makeQuestion(questionsCss);
       break;
     case 3:
-      makeQuestion(category3);
+      makeQuestion(questionsJavascript);
       break;
     default:
       console.log("Wrong category number! Try again!");
