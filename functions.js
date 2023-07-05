@@ -1,5 +1,5 @@
 import readline from "readline-sync";
-import { category1 } from "./questionList";
+import { questionsHtml, questionsCss } from "./questionList";
 
 const GREEN = "\u001B[1m\u001B[32m",
   RED = "\u001B[1m\u001B[31m",
@@ -21,10 +21,10 @@ You choose a category: `
 
   switch (categoryNum) {
     case 1:
-      makeQuestion(category1);
+      makeQuestion(questionsHtml);
       break;
     case 2:
-      makeQuestion(category2);
+      makeQuestion(questionsCss);
       break;
     case 3:
       makeQuestion(category3);
