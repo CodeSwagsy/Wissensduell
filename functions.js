@@ -114,3 +114,54 @@ export function showResults() {
   console.log(`\n${GREEN}Winner: ${winner.toUpperCase()}!${ANSI}`);
   console.log(`\n${GREEN}Thanks for playing!\n${ANSI}`);
 }
+
+
+// Albert's Timer
+class Timer {
+  constructor() {
+    this.timerInterval = null;
+    this.seconds = 20;
+    this.minutes = 0;
+    this.hours = 0;
+  }
+
+  start() {
+    clearInterval(this.timerInterval);
+    this.timerInterval = setInterval(() => this.update(), 1000);
+  }
+
+  stop() {
+    clearInterval(this.timerInterval);
+  }
+
+  update() {
+    this.seconds--;
+
+    if (this.seconds < 0) {
+      this.stop();
+    
+      return;
+    }
+
+    let timeDisplay = "";
+    // if (this.hours > 0) {
+    //   timeDisplay += this.hours + " Std ";
+    // }
+    // if (this.minutes > 0) {
+    // timeDisplay += this.minutes + " Min ";
+    // }
+    if (this.seconds < 10) {
+      timeDisplay += "0" + this.seconds + " Sek";
+    } else {
+      timeDisplay += this.seconds + " Sek";
+    }
+
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
+    process.stdout.write(timeDisplay);
+  }
+}
+
+// Beispiel
+const timer1 = new Timer();
+timer1.start();
