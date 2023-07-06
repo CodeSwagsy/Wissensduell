@@ -16,6 +16,17 @@ const spielerAnzahl =
     ["Ein Spieler", "Zwei Spieler", "Drei Spieler", "Vier Spieler"],
     "Wieviele Spieler möchten mitspielen?"
   ) + 1;
+if (spielerAnzahl === 0) {
+  console.log("\nDas Spiel ist aus. Tschüss!\n");
+  process.exit();
+}
+
+// ui code
+
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn1");
+let btn3 = document.getElementById("btn1");
+let btn4 = document.getElementById("btn1");
 
 for (let i = 1; i <= spielerAnzahl; i++) {
   let spielerName = question(`\nWie lautet der Name von Spieler ${i}: `);

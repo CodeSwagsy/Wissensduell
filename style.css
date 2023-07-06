@@ -1,0 +1,203 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-color: #020117;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  font-family: "Press Start 2P", cursive;
+}
+
+#ctn {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradientborder {
+  position: relative;
+  width: 99%;
+  padding: 40px 0;
+  font-size: 6rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 4px;
+  background: #020117;
+  font-family: "Press Start 2P", cursive;
+}
+.gradientborder::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  z-index: -1;
+}
+.gradientborder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  z-index: -2;
+  filter: blur(40px);
+}
+
+h1 {
+  text-shadow: 3px 3px 3px rgb(121, 118, 118);
+  font-size: 7rem;
+}
+
+span {
+  font-family: "Press Start 2P", cursive;
+  font-size: 8rem;
+  color: rgb(219, 22, 22);
+}
+
+.questions {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  width: 99%;
+  height: 100px;
+  padding: 150px;
+}
+
+.answers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99%;
+  height: 30rem;
+
+  margin: auto;
+  padding: 10rem;
+}
+
+.answer1 {
+  width: 450px;
+  height: 10rem;
+}
+
+.answer2 {
+  width: 450px;
+  height: 10rem;
+}
+
+.answer3 {
+  width: 450px;
+  height: 10rem;
+}
+
+.antwort {
+  --border: 1px; /* the border width */
+  --slant: 0.7em; /* control the slanted corners */
+  --color: #750cf2; /* the color */
+
+  font-size: 2rem;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: whitesmoke;
+  background: linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top
+      right,
+    linear-gradient(to top right, var(--color) 50%, #47464600 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 200px inset var(--s, #8f8f8f00),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+  transition: color var(--t, 0.3s), background-size 0.3s;
+}
+.antwort:focus-visible {
+  outline-offset: calc(-1 * var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.antwort:hover,
+.antwort:active {
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+.antwort:active {
+  --s: #0005;
+  transition: none;
+}
+
+.start {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #750cf2;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text h2 {
+  font-size: 40px;
+}
+
+.text p {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.start .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.start .buttons button {
+  height: 10rem;
+  width: 20%;
+  font-size: 40px;
+}
+
+.start .buttons button:nth-child(1) {
+  background-color: red;
+}
+.start .buttons button:nth-child(2) {
+  background-color: yellow;
+}
+.start .buttons button:nth-child(3) {
+  background-color: blue;
+}
+.start .buttons button:nth-child(4) {
+  background-color: green;
+}
