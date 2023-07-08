@@ -3,37 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/img/quiz.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <title>QuizTyme</title>
-    <link rel="shortcut icon" href="./img/quiz.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <div class="start">
+    <div id="buttons-overlay" class="start">
       <div class="text">
         <h2>Willkommen bei Quiz Tyme</h2>
         <p>Wieviele Spieler möchten mitspielen?</p>
       </div>
       <div class="buttons">
-        <button id="btn1" value="1">1</button>
-        <button id="btn2" value="2">2</button>
-        <button id="btn3" value="3">3</button>
-        <button id="btn4" value="4">4</button>
+        <button onclick="spielerZahl(this.value)" value="1">1</button>
+        <button onclick="spielerZahl(this.value)" value="2">2</button>
+        <button onclick="spielerZahl(this.value)" value="3">3</button>
+        <button onclick="spielerZahl(this.value)" value="4">4</button>
       </div>
-      <!-- <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" /> -->
     </div>
+    <div id="categories-overlay" class="categories">
+      <h2>Choose a quiz topic:</h2>
+      <div class="buttons">
+        <button value="1" onclick="ctgNum(this.value)">HTML</button>
+        <button value="2" onclick="ctgNum(this.value)">CSS</button>
+        <button value="3" onclick="ctgNum(this.value)">JS</button>
+      </div>
+    </div>
+
     <div id="ctn">
       <h1 class="gradientborder"><span>Q</span>uiz <span>T</span>yme</h1>
     </div>
-    <div class="questions"></div>
+    <div id="questions" class="questions"></div>
 
-    <div class="answers">
-      <div class="answer1 antwort"></div>
-      <div class="answer2 antwort"></div>
-      <div class="answer3 antwort"></div>
+    <div class="answers" id="answers-container">
+      <button id="answer1" class="answer1 antwort"></button>
+      <button id="answer2" class="answer2 antwort"></button>
+      <button id="answer3" class="answer3 antwort"></button>
     </div>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
