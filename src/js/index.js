@@ -132,7 +132,7 @@ async function makeQuestion(category) {
       answersContainer.style.pointerEvents = "auto";
       e.target.style.background = "";
       nextQuestion();
-    }, 0);
+    }, 2000);
   }
 }
 
